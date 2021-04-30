@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="author" content="Andrea Cera">
+    <meta name="description" content="project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-------------------------covering background-------------------------->
+    <div id="cover"></div>
+    <!--------------------general bar for main navigation------------------->
+    <section class="general">
+        <nav>
+            <a href="index.html"><img src="css/img/logo2.png"></a>
+            <div class="nav-links" id="menu">
+                <i class="fa fa-times" onclick="hideMenu(); uncoverDiv();"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="mission.html">MISSION</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="astronauts.html">ASTRONAUTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="join-us.html">JOIN US</a></li>
+                    <li><a href="about-us.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu(); coverDiv();"></i>
+        </nav>
+    </section>
+    <div class="news-icon"><i class="fa fa-newspaper-o" onclick="showNews(); coverDiv();"></i></div>
+    <div class="text-box">
+        <h1>The Fake Nasa</h1>
+        <p>We are a space agency built in 2021 it has 24 members 20 astronauts and 4 developers.our goal is to get the
+            front-end 30 and we will do everything to do it. <br>As you can see the site is divided into various
+            sections, you can navigate it with the menu bar above you.
+        </p>
+        <p>In the <a href="mission.html">mission</a> section you can find our current, past and future missions. <br>
+            <br>
+            In the <a href="atronaut.html">astronauts</a> section you can see our astronauts who are currently engaged
+            in various missions, and find
+            out everything about them <br> <br>in the <a href="gallery.html">gallery</a> section you will find images of
+            the various missions, photos
+            taken by our astronauts. <br> <br>
+            Learn more <a href="about-us.html">about-us</a> <br> <br> OR
+        </p>
+        <a href="join-us.html" class="button">Join Us!!</a>
+    </div>
+    <div class="news-icon">
+        <div class="news-links" id="news">
+            <i class="fa fa-times" onclick="hideNews(); uncoverDiv();"></i>
+            <a href="news.html"><h2>News</h2></a>
+            <div class="article">
+                <a href="mission.html#Artemis">
+                    <h3>Artemis</h3>
+                </a>
+                <img src="css/img/moon.png" alt="moon mission">
+                <p>our mission on the moon is UP!</p>
+            </div>
+            <div class="article">
+                <a href="mission.html#Mars">
+                    <h3>Mars</h3>
+                </a>
+                <img src="css/img/mars.png" alt="mars mission">
+                <p>our spedition on Mars!!</p>
+            </div>
+            <div class="article">
+                <a href="mission.html#Mercury">
+                    <h3>Mercury</h3>
+                </a>
+                <img src="css/img/mercury.png" alt="mercury mission">
+                <p>our holiday on mercury</p>
+            </div>
+        </div>
+    </div>
+    <!-------------------------MISSION HOMEPAGE--------------------------------->
+    <div class="mission-homepage">
+        <h2>Our Launch Mission </h2>
+        <a href="mission.html" class="button-2">Learn More!</a>
+    </div>
+    <!-------------------------ASTRONAUT HOMEPAGE--------------------------------->
+    <div class="astronaut-homepage">
+        <h2>Our Astronauts Section </h2>
+        <a href="astronauts.html" class="button-2">Learn More!</a>
+    </div>
+    <div class="about">
+        <h3>Developed By:</h3>
+        <img src="css/img/its.jpg" alt="its image">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Andrea Cera</td>
+                <td>Phone: 349-56 331 30</td>
+                <td>Age: 25</td>
+                <td>Country: Italy</td>
+            </tr>
+            <td>Giovanni Greco</td>
+            <td>Phone: 333-86 371 90</td>
+            <td>Age: 21</td>
+            <td>Country: Italy</td>
+            <tr>
+                <td>Lorenzo Gatto</td>
+                <td>Phone: 349-56 331 30</td>
+                <td>Age: 19</td>
+                <td>Country: Italy</td>
+            </tr>
+            <tr>
+                <tr>
+                    <td>Iliass Hounaifi</td>
+                    <td>Phone: 366-32 311 28</td>
+                    <td>Age: ?</td>
+                    <td>Country: Italy</td>
+                </tr>
+            </tr>
+        </table>
+    </div>
+    <!-----------------------OUR FOOTER -------------------------->
+    <footer>
+        <div class="basic-information">
+            <img src="css/img/logo2.png" alt="logo-agenzia">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+                <li><a href="about-us.html#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!----------------------END OF BODY--------------------->
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

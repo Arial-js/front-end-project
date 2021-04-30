@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="css/style-about-us.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="author" content="Andrea Cera">
+    <meta name="description" content="About Us">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-------------------------covering background-------------------------->
+    <div id="cover"></div>
+    <!--------------------general bar for main navigation------------------->
+    <section class="general">
+        <nav>
+            <a href="index.html"><img src="css/img/logo2.png"></a>
+            <div class="nav-links" id="menu">
+                <i class="fa fa-times" onclick="hideMenu(); uncoverDiv();"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="mission.html">MISSION</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="astronauts.html">ASTRONAUTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="join-us.html">JOIN US</a></li>
+                    <li><a href="about-us.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu(); coverDiv();"></i>
+        </nav>
+    </section>
+    <!-----------------------ABOUT US SECTION---------------------------->
+    <div class="about-us">
+        <img src="css/img/among-us.jpg" alt="among-us">
+        <h2>About Us</h2>
+        <p>We are a space mission agency that has been working on the front-end project for 4 weeks and we hope they
+            like it. Our story begins with the path to ITS in the backend school. We make sites but we are
+            beginners.
+            <br>
+            <br>
+            The Fake Nasa is Italian civil space program and the global leader in space exploration. The agency has a
+            diverse workforce of just under 2000 civil servants, and works with many more Italian contractors, academia,
+            and international and commercial partners to explore, discover, and expand knowledge for the benefit of
+            humanity. With an annual budget of € 23.2 billion in Fiscal Year 2021, The Fake Nasa supports more than
+            112,000 jobs across the Italy, generating more than € 64.3 million in total economic output (Fiscal Year
+            2019).
+        </p>
+    </div>
+    <!-----------------------HISTORY SECTION---------------------------->
+    <div class="history">
+        <img src="css/img/history.jpg" alt="history">
+        <h2>Our History</h2>
+        <p>The Fake Nasa was established in 1996, . The new agency was to have a distinctly civilian orientation,
+            encouraging peaceful applications in space science. Since its establishment, most Italian space exploration
+            efforts have been led by The Fake Nasa, including the Artemis landing missions, the Skylab space station,
+            and later the Space Shuttle. The Fake Nasa is supporting the International Space Station and is overseeing
+            the development of the Orion spacecraft, the Space Launch System, and Commercial Crew vehicles. The agency
+            is also responsible for the Launch Services Program, which provides oversight of launch operations and
+            countdown management for uncrewed The Fake Nasa launches.
+            <br>
+            <br>
+            The Fake Nasa science is focused on better understanding Earth through the Earth Observing System; advancing
+            heliophysics through the efforts of the Science Mission Directorate's Heliophysics Research Program;
+            exploring bodies throughout the Solar System with advanced robotic spacecraft such as New Horizons; and
+            researching astrophysics topics, such as the Big Bang, through the Great Observatories and associated
+            programs.
+        </p>
+    </div>
+    <!-----------------------OUR TEAM SECTION---------------------------->
+    <div class="team">
+        <h2>Our Team</h2>
+        <table>
+            <tr>
+                <th>Role</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Andrea Cera</td>
+                <td>25</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>Deputy Administrator</td>
+                <td>Giovanni Greco</td>
+                <td>21</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>Associate Administrator</td>
+                <td>Lorenzo Gatto</td>
+                <td>20</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+    </div>
+    <!-----------------------CONTACT US SECTION---------------------------->
+    <div class="contact">
+        <a name="contact-us"></a>
+        <h3>Contact Us</h3>
+        <ul>
+            <li><a href="index.html">The Fake Nasa</a></li>
+            <li>Torino, via Durandi 10</li>
+            <li>Telefono: 011 4580156</li>
+            <li>Mail: thefakenasa@gmail.com</li>
+        </ul>
+    </div>
+    <!-----------------------OUR FOOTER NEWSLETTER-------------------------->
+    <footer>
+        <div class="footer-box">
+            <h2>Never lose a News!!</h2>
+            <p>if you are interested in what we do and want to stay informed about upcoming missions or news fill out
+                the
+                form</p>
+        </div>
+        <div class="news-letter">
+            <h2>Receive our Newsletter</h2>
+            <form target="_blank" method="POST" action="/about-us">
+                <input class="news-text" type="text" name="FirstLastName" placeholder="First and Last name" required>
+                <input class="news-text" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+                    placeholder="mario.rossi@gmail.com" required>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
+        <div class="basic-information">
+            <img src="css/img/logo2.png" alt="logo-agenzia">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!----------------------END OF BODY--------------------->
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

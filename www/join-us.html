@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Join Us</title>
+    <link rel="stylesheet" type="text/css" href="css/style-join-us.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="author" content="Andrea Cera">
+    <meta name="description" content="Join Us">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-------------------------covering background-------------------------->
+    <div id="cover"></div>
+    <!-----------------------SOLITA MAIN BAR---------------------------->
+    <nav>
+        <div class="nav-links" id="menu">
+            <i class="fa fa-times" onclick="hideMenu(); uncoverDiv();"></i>
+            <a href="index.html"><img src="css/img/logo2.png"></a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mission.html">MISSION</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="astronauts.html">ASTRONAUTS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="join-us.html">JOIN US</a></li>
+                <li><a href="about-us.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu(); coverDiv();"></i>
+    </nav>
+    <!-----------------------JOIN US SECTION---------------------------->
+    <section class="join-us">
+        <h1>Join Us</h1>
+        <div class="contact-box">
+            <form target="_blank" method="POST" action="/join-us">
+                <input class="contact-box-text" type="text" name="firstName" placeholder="First Name.." required>
+                <input class="contact-box-text" type="text" name="middleName" placeholder="Middle Name (optional)">
+                <input class="contact-box-text" type="text" name="lastName" placeholder="Last Name.." required>
+                <!----------------------gender and color ----------------------------->
+                <div class="gender-color">
+                    <input type="radio" name="gender" id="male" value="man" checked="checked">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="woman">
+                    <label for="female">Female</label>
+                    <div class="color-box">
+                        <label for="eyes-color">eyes color</label>
+                        <select name="eyes">
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                            <option value="brown">brown</option>
+                        </select>
+                        <label for="hair-color">hair color</label>
+                        <select name="hair">
+                            <option value="blonde">blonde</option>
+                            <option value="black">black</option>
+                            <option value="brown">brown</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                </div>
+                <!---------------------- age------------------------>
+                <label for="age">age:</label>
+                <input class="contact-box-text" type="date" name="age" value="gg/mm/aaaa" min="1970-01-01"
+                    max="2000-01-01">
+                <!--date non supportato su safari e IE11-->
+                <input class="contact-box-text" name="weight" type="number" min="45" max="100"
+                    placeholder="WEIGHT: min 45kg max 100kg" required>
+
+                <!---------------------email address phone and bio --------------------->
+                <input class="contact-box-text" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+                    placeholder="mario.rossi@example.com" required>
+                <input class="contact-box-text" name="phone" type="tel" placeholder="Phone Number: 333-333-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input class="contact-box-text" name="address" type="text" placeholder="Address" required>
+                <!---------------missions----------------->
+                <div class="mission">
+                    <label for="mission">Choose the Mission:</label>
+                    <select name="mission">
+                        <option value="Jupiter" selected>Jupiter</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="Space Exploration">Space Exploration</option>
+                        <option value="Space Shuttle">Space Shuttle</option>
+                        <option value="BOOM BOOM ALIEN!">BOOM BOOM ALIEN!</option>
+                    </select>
+                </div>
+                <!-------------------Bio--------------------->
+                <textarea class="contact-box-text" name="bio" maxlength="255"
+                    placeholder="Your biography: max 255 characters"></textarea>
+                <!---------------send----------------->
+                <input type="submit" value="SEND" class="send">
+        </div>
+        </form>
+    </section>
+    <!-----------------------OUR FOOTER -------------------------->
+    <footer>
+        <div class="basic-information">
+            <img src="css/img/logo2.png" alt="logo-agenzia">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+                <li><a href="about-us.html#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!----------------------END OF BODY--------------------->
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
