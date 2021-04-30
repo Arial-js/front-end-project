@@ -1,0 +1,387 @@
+*{                  /*Simple reset*/
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body{              
+    background-color: black; 
+    max-width: 1100px;                   
+    margin: auto;                           
+}
+nav .fa{
+    display: none; 
+}
+/*------------main bar start-----------*/
+.general{
+    background-image: linear-gradient(rgba(1, 2, 5, 0.7),rgba(4,9,30,0.7)),url(img/Space.jpg);
+    background-position: center;
+    background-size: cover; 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{     /*LOGO*/
+    margin-left: 20%;
+    width: 120px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #da0505;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/*-------------------------ABOUT US ----------------------*/
+.about-us{
+    width: 25%;
+    border: 1px solid gray;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: #4c4177;
+    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+}
+.about-us img{
+    max-width: 100%;   
+}
+.about-us h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.about-us p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*-------------------------OUR HISTORY----------------------*/
+.history{
+    width: 72%;
+    float: left;
+    text-align: center;
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    padding-bottom: 25px;
+    margin-top: 10px;
+}
+.history h2{
+    padding-bottom: 15px;
+}
+.history p{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/*-------------------------OUR TEAM----------------------*/
+.team{
+    float: left;
+    width: 50%;
+    border: 1px solid gray;
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+    margin-top: 20px;
+}
+.team h2{
+    text-align: center;
+}
+.team table{
+    width: 100%;
+    border-collapse: collapse; /*in questo modo i bordi non hanno spazio e stanno tutti attaccati*/
+}
+.team table th{
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 900;
+    color: gold;
+}
+.team table td{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    text-align: center;
+}
+/*-------------------------CONTACT----------------------*/
+.contact{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+}
+.contact h3{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 10px; 
+    border-bottom: 2px dotted gray;
+}
+.contact ul li{
+    list-style: none;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.contact ul li a:hover{
+    color: red;
+}
+/*-------------------------FOOTER----------------------*/
+footer{
+    clear: both;
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    background-color: #000000;  /*https://www.eggradients.com/category/blue-gradient?83ff460c_page=4*/
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%); 
+    border-top: 5px solid black;  
+}
+.footer-box{
+    margin-left: 100px;
+    max-width: 300px;
+}
+.footer-box h2{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+/*-------------------------NEWS-LETTER----------------------*/
+.news-letter{
+    position: absolute;
+    width: 50%;
+    top: 100px;
+    right: -30px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-right: 100px;
+    background-color: rgb(22, 21, 21);
+}
+.news-letter h2{
+    text-align: center;
+    font-size: 30px;
+    color: orangered;
+    margin-bottom: 20px;
+}
+.news-letter input{
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(22, 21, 21);
+}
+.news-text{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+}
+.submit{
+    padding: 12px 32px;
+    border: 1px solid gray;
+}
+.submit:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+/*------------------------------Footer Footer-------------------------*/
+.basic-information{
+    border-top: 2px solid black;
+    margin-top: 145px;
+    text-align: center;
+}
+.basic-information img{
+    width: 65px;
+    position: absolute;
+    left: 0;
+}
+.basic-information ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+}
+.basic-information ul li a{
+    text-decoration: none;
+}
+.basic-information ul li a:hover{
+    color: orangered;
+}
+
+/*--------------------------MOBILE----------------------------*/
+
+@media(max-width: 700px){
+    
+    /*that's a big div that covers the screen when we are opening the navigation bar
+    Using the JS it fades with the nav bar*/ 
+
+    #cover{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgb(0, 0, 0, 0.7);
+        z-index: -1;
+        transition: 2s;
+    }
+
+    /* it makes the hamburger to stay on top of the page but under the right-navigation bar */
+    .fa-bars{
+        right: 0;
+        z-index: 2;
+    }
+    
+    nav img{
+        width: 80px;
+    }
+    .nav-links{
+        position: fixed;
+        background-color: #29539b;
+        background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 150px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: -1;
+        opacity: 0;
+        transition: 1s;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    nav .fa{
+        position: fixed;
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        text-align: left; 
+    }
+    .nav-links ul{
+        padding: 20px;
+    }
+    .fa-bars{             /*qua porto l'icona showmenu a destra */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /*----------------ABOUT US && HISTORY---------------*/
+    .about-us, .history{
+        clear: both;
+        width: 100%;
+        border: none;
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .about-us img{
+        max-width: 100%;   
+    }
+    .about-us h2, .history h2{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .about-us p, .history p{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+/*-------------------------OUR TEAM && CONTACT----------------------*/
+    .team, .contact{
+        clear: both;
+        width: 100%;
+        border: none;
+        margin: auto;
+        margin-bottom: 20px;
+    }   
+    .team h2, .contact h3{
+        text-align: center;
+    }
+    .contact{
+        text-align: center;
+    }
+/*-------------------------FOOTER----------------------*/
+    footer{
+        max-width: 800px;
+        margin: auto;
+        padding-top: 0;
+        padding-bottom: 0px;
+    }
+    .footer-box{
+        text-align: center;
+        margin: auto;
+    }
+    .footer-box h2{
+        padding-top: 20px;
+        text-align: center;
+        font-size: 21px;
+    }
+/*-----------------------News-Letter--------------------*/
+    .news-letter{
+        width: 80%;
+        left: 40px;
+        top: 200px;
+        right: auto;
+    }
+    .news-letter input{
+        max-width: 200px;
+    }
+    .basic-information{
+        margin-top: 500px;
+    }
+/*------------------------------Footer Footer-------------------------*/
+    .basic-information{
+        margin-top: 500px;
+    }
+    .basic-information img{
+        display: none;
+    }
+    .basic-information ul li{
+        padding: 13px 10px;
+    }
+    .basic-information ul li a{
+        text-decoration: underline;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 999px){
+     /*----------------ABOUT US && HISTORY---------------*/
+    .about-us, .history{
+        clear: both;
+        width: 100%;
+        border: none;
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .footer-box h2, .footer-box p{
+        margin-right: 200px;
+    }
+    .footer-box h2{
+        font-size: 20px;
+    }
+    .footer-box p{
+        font-size: 12px;
+    }
+
+}

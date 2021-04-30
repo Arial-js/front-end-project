@@ -1,0 +1,321 @@
+* {
+    /*Simple reset*/
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/*------------main bar start-----------*/
+
+.general {
+    background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    /*LOGO*/
+    margin-left: 20%;
+    width: 120px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #da0505;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+/*------------Mission Description-----------*/
+
+.mission-header {
+    text-align: center;
+    padding-bottom: 40px;
+    background-color: #080222;
+    font-size: 15px;
+}
+
+.mission-header h1 {
+    color: #da0505;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+
+/*------------Introduzione alle Mission-----------*/
+
+.current-mission {
+    background-image: url(img/right-now.png);
+    background-position: right;
+}
+
+.current-mission div:last-child{
+    position: absolute;
+    left: 35%;
+    width: 29.9%;
+    height: 11px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+.charge-bar{
+    position: absolute;
+    border-radius: 7px;
+    left: 35%;
+    height: 15px;
+    background: rgb(255, 0, 0);
+    animation: bar 10s infinite;
+}
+
+@keyframes bar {
+    0%   {width: 0%;}
+
+    50% {background-color: yellow;}
+    
+    100%	{
+        width: 30%;
+        background-color: green;
+    }
+  }
+
+.future-mission {
+    background-image: url(img/coming-soon.jpeg);
+    background-position: right;
+}
+
+.past-mission {
+    background-image: url(img/long-time-ago.jpg);
+    background-position: left;
+}
+
+.current-mission,
+.future-mission,
+.past-mission {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgb(105, 223, 135);
+    clear: both;
+}
+
+.current-mission h2,
+.future-mission h2,
+.past-mission h2 {
+    color: black;
+}
+
+.box-mission {
+    border-bottom: 1px solid white;
+}
+
+.box-mission,
+.box-mission-row-2 {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+}
+
+.box-mission img,
+.box-mission-row-2 img {
+    width: 100%;
+}
+
+.box-mission ul li,
+.box-mission-row-2 ul li {
+    list-style: none;
+}
+
+.box-mission a,
+.box-mission-row-2 a {
+    /*future mission it could be you!!*/
+    text-decoration: none;
+    color: rgb(251, 255, 0);
+}
+
+.box-mission ul li,
+.box-mission-row-2 ul li {
+    font-size: 16px;
+}
+
+.box-mission-text h3 {
+    padding-bottom: 4%;
+    font-size: x-large;
+    font-style: italic;
+}
+
+.box-mission-text ul li span {
+    font-weight: 900;
+    color: #700d0d;
+}
+
+
+/*-------------------------FOOTER----------------------*/
+
+footer {
+    clear: both;
+    position: relative;
+    border-top: 4px solid black;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+
+/*------------------------------Footer Footer-------------------------*/
+
+.basic-information {
+    text-align: center;
+}
+
+.basic-information img {
+    width: 60px;
+    position: absolute;
+    left: 0;
+}
+
+.basic-information ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+.basic-information ul li a {
+    text-decoration: none;
+}
+
+.basic-information ul li a:hover {
+    color: orangered;
+}
+
+
+/*----------------------MOBILE--------------------*/
+
+@media(max-width: 700px) {
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    nav img {
+        /*LOGO*/
+        width: 80px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0;
+    }
+    nav {
+        width: 100%;
+        background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        background-color: rgb(29, 28, 28);
+        z-index: 1;
+    }
+    .mission-header {
+        /*fixo posizione e background del mission header*/
+        padding-top: 130px;
+        text-align: center;
+        background-color: #080222;
+    }
+    .mission-header h1 {
+        /*fixo il titolo del mission header*/
+        color: #da0505;
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .mission-header p {
+        /*fixo il testo del mission header*/
+        text-align: initial;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .current-mission,
+    .future-mission,
+    .past-mission {
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    .current-mission h2 {
+        padding-right: 30px;
+    }
+    .past-mission h2 {
+        padding-left: 45px;
+    }
+    .box-mission,
+    .box-mission-row-2 {
+        width: 100%;
+        position: relative;
+        padding-bottom: 5%;
+        border-left: none;
+        border-right: none;
+    }
+    .box-mission-text {
+        float: right;
+    }
+    .box-mission-text h3 {
+        font-size: 18px;
+    }
+    .box-mission img,
+    .box-mission-row-2 img {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 40%;
+    }
+    .box-mission ul li,
+    .box-mission-row-2 ul li {
+        font-size: 13px;
+    }
+    .basic-information ul li {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    .basic-information img {
+        display: none;
+    }
+}

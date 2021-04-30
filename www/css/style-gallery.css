@@ -1,0 +1,192 @@
+* {
+    /*Simple reset*/
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+    max-width: 1100px;
+    /*in questo modo non può andare oltre in schermi grandi*/
+    margin: auto;
+    /*margin auto così sta al centro*/
+}
+
+
+/*------------main bar start-----------*/
+
+.general {
+    background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    /*LOGO*/
+    margin-left: 20%;
+    width: 120px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #da0505;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/*------------------------SECONDARY BAR-------------------------*/
+
+.secondary-bar{
+    background-color: #485461;
+    padding: 15px 0px;
+    border-top: 4px solid black;
+}
+.secondary-bar ul li{
+    display: inline;
+    padding: 8px 20px;
+    border-left: 2px solid gray;
+}
+.secondary-bar ul li:nth-of-type(1){
+    border: none;
+}
+.secondary-bar ul li:hover{
+    background-color: rgb(18, 186, 228);
+}
+.secondary-bar ul li a{
+    text-decoration: none;
+}
+
+/*------------------------NOW MISSION-----------------------*/
+
+.now-mission h4, .fut-mission h4, .prev-mission h4, .crew h4{
+    width: 170px;
+    margin-top: 18px;
+    margin-bottom: 35px;
+    padding: 10px;
+    background-color: deepskyblue;
+}
+.now-mission img, .fut-mission img, .prev-mission img, .crew img{
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+/*-------------------------FOOTER----------------------*/
+
+footer {
+    clear: both;
+    position: relative;
+    border-top: 4px solid black;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+
+/*------------------------------Footer Footer-------------------------*/
+
+.basic-information {
+    text-align: center;
+}
+
+.basic-information img {
+    width: 60px;
+    position: absolute;
+    left: 0;
+}
+
+.basic-information ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+.basic-information ul li a {
+    text-decoration: none;
+}
+
+.basic-information ul li a:hover {
+    color: orangered;
+}
+
+@media(max-width: 1091px){
+    nav img {
+        /*LOGO*/
+        width: 80px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0;
+    }
+    nav {
+        width: 100%;
+        background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    .secondary-bar{
+        position: sticky;
+        top: 95px;
+        text-align: center;
+    }
+    .secondary-bar ul li{
+        font-size: 13px;
+        padding: 4px ;
+    }
+    .now-mission{
+        padding-top: 100px;
+    }
+    .now-mission,.prev-mission,.fut-mission, .crew{
+        text-align: center;
+    }
+    .now-mission h4,.prev-mission h4,.fut-mission h4, .crew h4{
+        max-width: 150px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .now-mission img, .fut-mission img, .prev-mission img, .crew img{
+        width: 300px;
+    }
+    .basic-information ul li {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    .basic-information img {
+        display: none;
+    }
+
+} /* da rivedere la secodnary bar per lo schermo più piccolo 320px */

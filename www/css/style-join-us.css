@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+body{
+    background-image: linear-gradient(rgba(1, 2, 5, 0.7),rgba(4,9,30,0.7)),url(img/join-us.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+/*-------------------------------MAIN BAR----------------------------------*/
+nav .fa{
+    display: none; 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    position: relative; 
+    max-width: 800px;    
+    margin: auto;        
+    flex: 1;
+    text-align: center;
+    padding-top: 2%;     
+    padding-bottom: 2%;  
+}
+nav img{
+    position: absolute; 
+    width: 120px;
+    top: 10px;
+    left: -40px;  
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #da0505;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/*---------------------------JOIN US SECTION------------------------------*/
+option{                         /*in modo che si vedano tutte le option nei select in black */
+    text-align: center; 
+    color: black;
+}
+.join-us h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+.contact-box{
+    max-width: 550px;
+    margin: auto;
+}
+.contact-box-text{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(34, 34, 34);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    resize: none; 
+}
+.gender-color{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+select{
+    color: black;   /*in modo che si veda la scelta in nella select in black*/
+}
+.color-box{
+    float: right;
+}
+.mission{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.send{
+    float: right;
+    padding: 12px 40px ;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background-color: #f1f1f3e5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*-------------------------FOOTER----------------------*/
+footer{
+    clear: both;
+    position: relative;
+    border-top: 4px solid black;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);   
+}
+/*------------------------------Footer Footer-------------------------*/
+.basic-information{
+    text-align: center;
+}
+.basic-information img{
+    width: 60px;
+    position: absolute;
+    left: 0;
+}
+.basic-information ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+}
+.basic-information ul li a{
+    text-decoration: none;
+}
+.basic-information ul li a:hover{
+    color: orangered;
+}
+
+/*----------------------MOBILE------------------*/
+
+@media(max-width: 700px){
+
+    /*that's a big div that covers the screen when we are opening the navigation bar
+    Using the JS it fades with the nav bar*/ 
+
+    #cover{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgb(0, 0, 0, 0.7);
+        z-index: -1;
+        transition: 2s;
+    }
+
+    .fa-bars{
+        right: 0;
+        z-index: 2;
+    }
+
+    /*-------------barra menu hamburger e logo-------------*/
+    nav img{
+        position: fixed;        /*tiro fuori il logo dalla barra nascosta del menu*/
+        width: 80px;
+        top: 10px;
+        left: 0;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: center;
+        z-index: -1;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        text-align: left;  /*questo align consente alla X di stare left in questo visto che ho dato sopra align center a tutto il nav-links*/
+    }
+    .nav-links ul{
+        padding: 20px;
+    }
+    .fa-bars{             /*qua porto l'icona showmenu alla destra del padre */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /*------------inizio del JOIN US vero e proprio---------*/
+    .join-us h1{
+        padding-top: 30px;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+        color: #da0505;
+        border-bottom: 2px dotted gray;
+    }
+    .contact-box{
+        max-width: 300px; /*più piccolo il rettangolo grigio*/
+    }
+    .contact-box-text{
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .gender-color{
+        margin: 0;
+    }
+    .color-box{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        float: left;   /*così sta left*/
+    }
+    .send{
+        padding: 10px 25px;
+    }
+    .basic-information ul li{
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    .basic-information img{
+        display: none;
+    }
+}

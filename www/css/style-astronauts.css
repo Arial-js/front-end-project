@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    max-width: 1100px;
+    margin: auto;
+    background-color: black;
+    color: white;
+}
+
+
+/*------------logo + main bar start-----------*/
+
+.general {
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav h3 {
+    margin-left: 50px;
+    color: rgb(93, 173, 129);
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*-----------main bar start----------*/
+
+nav img {
+    margin-left: 20%;
+    width: 120px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #da0505;
+    display: block;
+    margin: auto;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+
+/******************** Description ********************/
+
+.main {
+    position: relative;
+    background-color: rgba(1, 2, 5, 0.7);
+}
+
+.description {
+    position: relative;
+    top: 10px;
+    padding: 20px 20px 0px 20px;
+    background-color: rgba(4, 9, 30, 0.7);
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+}
+
+.description h1 {
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+.description p:last-child {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+/******************** Main ********************/
+
+div h2 {
+    width: 30%;
+    padding: 10px;
+    margin: 20px 35%;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.active h2,
+.retired h2 {
+    font-size: 22px;
+}
+
+.active h2 {
+    background-color: rgba(0, 196, 33, 0.7);
+}
+
+.retired h2 {
+    background-color: rgb(236, 56, 56);
+}
+
+.astronauts {
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    padding: 20px 0;
+    margin-top: 1%;
+    text-align: center;
+    background-color: rgba(4, 9, 30, 0.7);
+}
+
+.astronauts-text {
+    margin: 10px;
+}
+
+.astronauts-text a {
+    color: cyan;
+}
+
+.astronauts-text a:visited {
+    color: rgb(68, 103, 219);
+}
+
+.astronauts-text * {
+    padding: 3px 0;
+}
+
+strong {
+    color: red;
+    font-size: 17px;
+}
+
+.infos:nth-of-type(6) {
+    font-size: 14px;
+}
+
+.astronauts img {
+    display: block;
+    max-width: 200px;
+    max-height: 220px;
+    margin: auto;
+}
+
+
+/*-------------------------FOOTER----------------------*/
+
+footer {
+    clear: both;
+    position: relative;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    border-top: 4px solid black;
+}
+
+
+/*------------------------------Footer Footer-------------------------*/
+
+.basic-information {
+    text-align: center;
+}
+
+.basic-information img {
+    width: 60px;
+    position: absolute;
+    left: 0;
+}
+
+.basic-information ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+.basic-information ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.basic-information ul li a:hover {
+    color: orangered;
+}
+
+
+/****************************RICONTROLLARE****************************/
+
+@media(max-width: 1250px) {
+    body {
+        margin: 0;
+    }
+    /*Barra main navigation se scrolli si mantiene al top*/
+    nav {
+        position: fixed;
+        width: 100%;
+        background-image: linear-gradient(rgba(1, 2, 5, 0.7), rgba(4, 9, 30, 0.7)), url(img/Space.jpg);
+        background-position: center;
+        background-size: cover;
+        z-index: 1;
+    }
+    .description {
+        padding-top: 60px;
+    }
+    .description h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .description,
+    .astronauts {
+        font-size: 17px;
+    }
+    div h2 {
+        font-size: 20px;
+    }
+    .astronauts {
+        width: 49%;
+        margin: 1% 0;
+    }
+}
+
+@media(max-width: 800px) {
+    body {
+        margin: 0;
+    }
+    nav img {
+        width: 80px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0;
+    }
+    /*Barra main navigation se scrolli si mantiene al top*/
+    nav {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+    .description h1 {
+        margin-top: -40px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .description,
+    .astronauts {
+        font-size: 12px;
+    }
+    .astronauts {
+        width: 100%;
+        padding: 0;
+    }
+    .astronauts-text strong,
+    .astronauts-text p {
+        display: inline;
+    }
+    .astronauts img {
+        max-width: 160px;
+        max-height: auto;
+        float: left;
+    }
+    .infos * {
+        font-size: 13px;
+    }
+    /* Mette i ":" solo nella visualizzazione in mobile */
+    strong::after {
+        content: ':';
+        padding-right: 5px;
+    }
+    .infos:nth-of-type(1),
+    .infos:nth-of-type(2),
+    .infos:nth-of-type(3),
+    .infos:nth-of-type(4),
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        padding-top: 15px;
+    }
+    .infos:nth-of-type(7) strong {
+        display: block;
+        margin-top: 12px;
+    }
+    .main {
+        top: 100px;
+    }
+    .active h2,
+    .retired h2 {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 650px) {
+    body {
+        margin: 0;
+    }
+    nav {
+        width: 100%;
+    }
+    ;
+    .active h2 {
+        font-size: 13px;
+    }
+    .astronauts img {
+        max-width: 180px;
+        max-height: auto;
+    }
+    .infos:nth-of-type(1),
+    .infos:nth-of-type(2),
+    .infos:nth-of-type(3),
+    .infos:nth-of-type(4),
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        padding-top: 15px;
+    }
+    .infos:nth-of-type(7) strong {
+        display: block;
+        margin-top: 14px;
+    }
+    .basic-information ul li {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    .basic-information img {
+        display: none;
+    }
+}
+
+@media(max-width: 575px) {
+    nav {
+        width: 100%;
+    }
+    .menu li a {
+        font-size: 12px;
+    }
+    .active h2 {
+        font-size: 11px;
+    }
+    .astronauts img {
+        max-width: 150px;
+        max-height: auto;
+    }
+    .infos,
+    .infos strong {
+        font-size: 12px;
+    }
+    .infos:nth-of-type(1),
+    .infos:nth-of-type(2),
+    .infos:nth-of-type(3),
+    .infos:nth-of-type(4),
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        padding-top: 5px;
+    }
+    .infos:nth-of-type(7) strong {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 527px) {
+    .infos strong {
+        font-size: 13px;
+    }
+    .infos p {
+        font-size: 12px;
+    }
+    .infos:nth-of-type(6),
+    .infos:nth-of-type(6) strong {
+        display: block;
+    }
+    .astronauts img {
+        max-width: 80px;
+        max-height: auto;
+    }
+    .infos:nth-of-type(1),
+    .infos:nth-of-type(2),
+    .infos:nth-of-type(3),
+    .infos:nth-of-type(4),
+    .infos:nth-of-type(5) {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .infos:nth-of-type(5),
+    .infos:nth-of-type(6) {
+        padding-top: 10px;
+    }
+}
+
+@media(max-width:375px) {
+    .astronauts img {
+        max-width: 80px;
+    }
+}
