@@ -9,7 +9,7 @@ var app = express()
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-Airtable.configure({      //configuro airtable 
+Airtable.configure({       
   endpointUrl: "https://api.airtable.com",
   apiKey: "myapikey"
 });
@@ -19,20 +19,18 @@ var base = Airtable.base("mybase");
 
 app.use(express.static("www"));
 
-// tu fai una richiesta di POST che va a finrie nella request appunto e quindi grazie a body-parser prendi quella request e la fai diventare il body dell"index
-app.post("/join-us", urlencodedParser, function (req, res) { //post perchè il post nel form è un method POST
+
+app.post("/join-us", urlencodedParser, function (req, res) { 
 
   var body = req.body;
 
-  //airtable.com/tblAVF75CETKifJFh/viwevzf6lc2MSWElf?blocks=hide
-
-  base("Astronauts").create([     //db airtable
+  base("Astronauts").create([     
     {
       "fields": {
-        "Name": body.firstName,           //il "Name" si riferisce al db airtable mentre body.firstName al name dato agli input/select nel join-us
+        "Name": body.firstName,          
         "Middle Name": body.middleName,
         "Last Name": body.lastName,
-        "Gender": body.gender,          //ricorda che è la value dell"index/join-us che determina il valore!!
+        "Gender": body.gender,         
         "Eyes": body.eyes,
         "hair": body.hair,
         "Eyes": body.eyes,
@@ -46,7 +44,7 @@ app.post("/join-us", urlencodedParser, function (req, res) { //post perchè il p
         "Bio": body.bio,
       }
     },
-  ], function (err, records) {      // gestisco errori
+  ], function (err, records) {     
     if (err) {
       console.error(err);
       return;
@@ -58,8 +56,6 @@ app.post("/join-us", urlencodedParser, function (req, res) { //post perchè il p
 
   /*-------------------------------MAIL------------------------------*/
 
-//https://www.w3schools.com/nodejs/nodejs_email.asp
-
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -70,7 +66,7 @@ app.post("/join-us", urlencodedParser, function (req, res) { //post perchè il p
 
   var mailOptions = {
     from: "myemail",
-    to: body.email,                                   //la prendo con il body-parser
+    to: body.email,                                   
     subject: "Sending Email using Node.js",
     text: "Your apply has been received"
   };
@@ -101,7 +97,7 @@ app.post("/about-us", urlencodedParser, function (req, res) {
         "email": body.email,
       }
     },
-  ], function (err, records) {      // gestisco errori
+  ], function (err, records) {      
     if (err) {
       console.error(err);
       return;
@@ -113,9 +109,6 @@ app.post("/about-us", urlencodedParser, function (req, res) {
 
   /*----------------------------INVIO MAIL--------------------------*/
 
-  //https://www.w3schools.com/nodejs/nodejs_email.asp
-
-
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -126,7 +119,7 @@ app.post("/about-us", urlencodedParser, function (req, res) {
 
   var mailOptions = {
     from: "myemail",
-    to: body.email,                                   //la prendo con il body-parser
+    to: body.email,                                   
     subject: "Sending Email using Node.js",
     text: "Thank you for your subscription"
   };
@@ -139,13 +132,13 @@ app.post("/about-us", urlencodedParser, function (req, res) {
     }
   });
 
-  res.sendFile("www/news-letter.html", {   //perchè sta in www/apply.html
+  res.sendFile("www/news-letter.html", { 
     root: path.join(__dirname, "./")
   })
 })
 
 
-// GESTIONE ERRORE
+
 app.use((err, req, res, next) => {
   console.error("ERROR", err.stack);
   switch (true) {
